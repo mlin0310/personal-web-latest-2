@@ -208,7 +208,7 @@ export default function Home() {
               Get in Touch
             </h2>
             <p className="mt-4 text-lg text-gray-500">
-              Let's discuss your next project
+              Let&apos;s discuss your next project
             </p>
           </div>
           {/* New Contact Info Layout */}
