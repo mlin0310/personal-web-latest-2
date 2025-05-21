@@ -192,7 +192,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">學術工作 📚</h3>
               <div className="text-gray-600 space-y-4">
                 <p>
-                  國科會計畫（VR研究）-計畫主持人：林日璇教授
+                  國科會計畫-計畫主持人：林日璇教授
                 </p>
                 <p>
                   碩士論文《不確定性對使用者信任與偏見之影響： AI 作為人物誌協作代理人》-指導教授：侯宗佑、陳宜秀教授
