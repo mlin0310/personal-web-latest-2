@@ -11,35 +11,28 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, imageUrl, tags, link }: ProjectCardProps) {
   return (
-    <div className="group relative bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2x2 hover:-translate-y-2">
+    <div className="group relative bg-white rounded-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:rotate-[0.5deg]">
+      {/* Image with overlay gradient on hover */}
       <div className="relative h-48 w-full overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
+      {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 text-sm bg-indigo-100 text-indigo-600 rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-yellow-600">{title}</h3>
+        <p className="text-gray-600 mb-4 transition-all duration-500 group-hover:text-gray-800">{description}</p>
         <Link
           href={link}
-          className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium"
+          className="inline-flex items-center text-gray-400 group-hover:text-gray-900 font-medium transition-all duration-300"
         >
           View Project
           <svg
-            className="ml-2 w-4 h-4"
+            className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -55,4 +48,4 @@ export default function ProjectCard({ title, description, imageUrl, tags, link }
       </div>
     </div>
   );
-} 
+}

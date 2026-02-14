@@ -32,9 +32,17 @@ body {
 }
 
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .float-animation {
@@ -48,4 +56,29 @@ body {
 
 .bg-white.rounded-lg.shadow-lg.p-8:hover {
   transform: translateY(-10px);
+}
+
+/* Hover float effect for buttons */
+.hover-float-effect:hover {
+  animation: float 0.8s ease-in-out 1;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

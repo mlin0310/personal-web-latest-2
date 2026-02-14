@@ -4,24 +4,31 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "FreeSeed-自由種子",
-    description: "致力於推廣開源文化與自由軟體。",
+    title: "FreeSeed",
+    description: "Dedicated to promoting open-source culture and free software.",
     imageUrl: "/project1.jpg",
     tags: ["Figma", "Asana"],
     link: "https://ocf.tw/p/freeseed/"
   },
   {
-    title: "AI藥物辨識系統",
-    description: "使用機器學習技術開發的藥物辨識系統，幫助使用者快速識別藥物。",
+    title: "AI Drug Recognition System",
+    description: "A drug recognition system developed with machine learning to help users quickly identify medications.",
     imageUrl: "/project2.png",
     tags: ["Google Colab", "TypeScript", "Firebase"],
     link: "https://www.canva.com/design/DAGmkSgJqaQ/wBVJollylvWXYJSNCyNATg/edit"
   },
   {
-    title: "捷運黑客松專案 🚧",
-    description: "使用Figma開發的改善版本。",
+    title: "MRT Hackathon Project 🚧",
+    description: "An improved redesign prototype built with Figma.",
     imageUrl: "/project3.png",
     tags: ["Figma", "Tailwind CSS", "TypeScript"],
+    link: "#"
+  },
+  {
+    title: "Magical Well Motion Capture Project",
+    description: "Digital motion capture project for Wasami Company.",
+    imageUrl: "/project4.png",
+    tags: [],
     link: "#"
   }
 ];
@@ -36,7 +43,7 @@ export default function Home() {
             <div className="flex-shrink-0">
               <h1 className="text-2xl font-bold text-gray-900"></h1>
             </div>
-            
+
             {/* Center Logo */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <div className="relative w-12 h-12">
@@ -49,55 +56,127 @@ export default function Home() {
                 />
               </div>
             </div>
-          
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-center space-x-8">
-                <a href="#" className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium">Home</a>
-                <a href="#portfolio" className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium">Portfolio</a>
-                <a href="#about" className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium">About</a>
-                <a href="#contact" className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium">Contact</a>
-              </div>
-            </div>
+
+
+
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm -z-10"></div>
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative bg-stone-50">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-12">@Morris Lin All Rights Reserved</p>
           <div className="text-center">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block">Hi, I&apos;m</span>
-              <span className="block text-yellow-500">Morris Lin</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl leading-relaxed font-medium text-gray-800 tracking-tight">
+              Hey, I&apos;m <span className="font-bold text-gray-900">Morris</span>
+              {" "}a <span className="font-bold text-gray-900">Project Designer</span>,
+              <br className="hidden sm:block" />
+              {" "}based in 📍 <span className="font-bold text-gray-900">Taipei</span>,
+              <br className="hidden sm:block" />
+              {" "}love 🐱 cats, 🎬 filmmaking,
+              <br className="hidden sm:block" />
+              {" "}and crafting <span className="font-bold text-gray-900">UX experiences</span>.
             </h1>
-            <div className="mt-8 flex justify-center">
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
-                <Image
-                  src="/profile.jpg.png"
-                  alt="Profile picture"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+          </div>
+          <div className="mt-10 flex justify-center gap-4">
+            <Link
+              href="#portfolio"
+              className="px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-gray-700 transition-colors"
+            >
+              My Work
+            </Link>
+            <a
+              href="#contact"
+              className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:bg-yellow-400 hover:border-yellow-400 hover:text-gray-900 transition-colors"
+            >
+              Let&apos;s connect
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Navigator */}
+      <nav className="sticky top-16 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-2 py-3 overflow-x-auto scrollbar-hide">
+            <a href="#partners" className="shrink-0 px-4 py-1.5 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">Partners</a>
+            <a href="#experience" className="shrink-0 px-4 py-1.5 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">Experience</a>
+            <a href="#portfolio" className="shrink-0 px-4 py-1.5 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">Projects</a>
+            <a href="#about" className="shrink-0 px-4 py-1.5 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">About</a>
+            <a href="#contact" className="shrink-0 px-4 py-1.5 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Partnered With Section */}
+      <section id="partners" className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-medium text-gray-400 uppercase tracking-widest text-center mb-8">partnered with</p>
+          <div className="flex items-center justify-center gap-10 sm:gap-16 flex-wrap">
+            <div className="relative w-[100px] h-[100px]">
+              <Image src="/partners/meta.png" alt="Meta" fill className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+            <div className="relative w-[110px] h-[110px]">
+              <Image src="/partners/nccu.png" alt="NCCU" fill className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+            <div className="relative w-[100px] h-[100px]">
+              <Image src="/partners/logo.webp" alt="OCF" fill className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+            <div className="relative w-[110px] h-[110px]">
+              <Image src="/partners/wasami.png" alt="Wasami" fill className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+            <div className="relative w-[100px] h-[100px]">
+              <Image src="/partners/moda.png" alt="MODA" fill className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-10">Work Experience</h2>
+          <div className="space-y-8">
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2025 — present</span>
+              <div>
+                <p className="font-medium text-gray-900">Project Intern at Institute for Information Industry (III)</p>
               </div>
             </div>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              設計師和影視工作者，喜歡貓。
-            </p>
-            <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow">
-                <Link
-                  href="#portfolio"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 md:py-4 md:text-lg md:px-10"
-                >
-                  My Work 📥
-                </Link>
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2025</span>
+              <div>
+                <p className="font-medium text-gray-900">Research Scholarship Recipient at Meta</p>
+                <p className="mt-1 text-sm text-gray-500">Selected as a Meta Scholarship recipient (Class of 2025) and awarded 7,000 USD to complete studies in AI agents and the Metaverse.</p>
               </div>
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a href="#contact" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-md text-white bg-yellow-500 hover:bg-yellow-600 md:py-4 md:text-lg md:px-10">
-                  Contact Me
-                </a>
+            </div>
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2025 — 2026</span>
+              <div>
+                <p className="font-medium text-gray-900">Research Assistant at NCCU</p>
+                <p className="mt-1 text-sm text-gray-500">Led scripting and content production for VR materials used as core stimuli in user studies.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2025 — 2025</span>
+              <div>
+                <p className="font-medium text-gray-900">UX Designer at Open Culture Foundation</p>
+                <p className="mt-1 text-sm text-gray-500">Designed the whole UX experience and user interface for FreeSEED.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2025 — 2025</span>
+              <div>
+                <p className="font-medium text-gray-900">Teaching Assistant at NCCU</p>
+                <p className="mt-1 text-sm text-gray-500">Teaching assistant for the Bachelor&apos;s program in the College of Communication, NCCU.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2021 — 2022</span>
+              <div>
+                <p className="font-medium text-gray-900">Project Intern at OMNInsight Co., Ltd</p>
+                <p className="mt-1 text-sm text-gray-500">Supported the completion of digital projects.</p>
               </div>
             </div>
           </div>
@@ -107,17 +186,12 @@ export default function Home() {
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Featured Projects
-            </h2>
-            <p className="mt-4 text-lg text-gray-500">
-              A selection of my recent work
-            </p>
-          </div>
-          <div className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-10">Featured Projects</h2>
+          <div className="mt-12 flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide -mx-4 px-4">
             {projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+              <div key={index} className="snap-start shrink-0 w-[300px] sm:w-[340px]">
+                <ProjectCard {...project} />
+              </div>
             ))}
           </div>
         </div>
@@ -125,76 +199,59 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              About Me
-            </h2>
-            <p className="mt-4 text-lg text-gray-500">
-              Get to know more about my journey and expertise
-            </p>
-          </div>
-          <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">學歷 🏫</h3>
-              <div className="text-gray-600 space-y-4">
-                <p className="font-medium">2024-present</p>
-                <p className="flex items-center gap-2">
-                  國立政治大學 傳播碩士學位學程
-                  <div className="relative w-4 h-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-10">About Me</h2>
+
+          {/* Education + Awards side by side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-8">education</h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-8">
+                  <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2024 — present</span>
+                  <div>
+                    <p className="font-medium text-gray-900">National Chengchi University (NCCU)</p>
+                    <p className="mt-1 text-sm text-gray-500">Master's Program in Communication</p>
                   </div>
-                </p>
-                <p className="font-medium mt-4">2020-2024</p>
-                <p>世新大學 廣播電視電影學系</p> 
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">工作經驗 💼</h3>
-              <div className="text-gray-600 space-y-6">
-                <div>
-                  <p className="font-medium">2025/03-present</p>
-                  <p>林日璇教授媒體心理實驗室 - 研究助理</p>
                 </div>
-                <div>
-                  <p className="font-medium">2025/03-04</p>
-                  <p>自由種子計畫 - 使用者經驗開發人員</p>
-                </div>
-                <div>
-                  <p className="font-medium">2024/11-12</p>
-                  <p>台北金馬影展執行委員會 - 工作人員</p>
-                </div>
-                <div>
-                  <p className="font-medium">2021/09-2022/04</p>
-                  <p>詮識數位 - 專案實習生</p>
+                <div className="flex items-start gap-8">
+                  <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2020 — 2024</span>
+                  <div>
+                    <p className="font-medium text-gray-900">Shih Hsin University</p>
+                    <p className="mt-1 text-sm text-gray-500">Department of Radio, Television & Film</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">獲獎紀錄 🏆</h3>
-              <div className="grid grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-8">awards</h3>
+              <div className="space-y-6">
                 <div>
-                  <h4 className="font-medium text-gray-900 mb-2">作品名稱</h4>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>音效之短片作品《海龜少年》</li>
-                    <li>音效之短片作品《梅花梅花幾月開》</li>
-                  </ul>
+                  <p className="font-medium text-gray-900">Sound Design for Short Film "Summer of Farewell"</p>
+                  <p className="mt-1 text-sm text-gray-500">Kaohsiung Film Festival — Best Student Narrative Film</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900 mb-2">榮譽</h4>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>高雄電影節台灣組：最佳學生劇情片</li>
-                    <li>新北市學生影像新星獎：入選</li>
-                  </ul>
+                  <p className="font-medium text-gray-900">Sound Design for Short Film "Blossoming"</p>
+                  <p className="mt-1 text-sm text-gray-500">New Taipei City Student Film Rising Star Award — Nominee</p>
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">學術工作 📚</h3>
-              <div className="text-gray-600 space-y-4">
-                <p>
-                  國科會計畫-計畫主持人：林日璇教授
-                </p>
-              </div>
+          </div>
+
+          {/* Academic Work */}
+          <h3 className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-8">academic work</h3>
+          <div className="space-y-6">
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2025 — 2026</span>
+              <p className="font-medium text-gray-900">Prof. Tammy Lin's Media Psychology Lab</p>
+            </div>
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2024 — present</span>
+              <p className="font-medium text-gray-900">Prof. Tsung-Yu Hou's Social Intelligence Technologies Experimental Studio</p>
+            </div>
+            <div className="flex items-start gap-8">
+              <span className="text-sm text-gray-400 whitespace-nowrap w-32 shrink-0 pt-0.5">2024 — present</span>
+              <p className="font-medium text-gray-900">Prof. YiHsiu Chen's Intelligent Interaction Lab</p>
             </div>
           </div>
         </div>
@@ -231,6 +288,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </main >
   );
 }
